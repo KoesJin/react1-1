@@ -2,7 +2,7 @@
 
 ⭐️ [Gitgub Push](#github-push-하기)
 
-⭐️⭐️ [Github Pages 배포](#create-react-app-github-pages-배포)
+⭐️ [Github Pages 배포](#create-react-app-github-pages-배포)
 
 1️⃣ [1주차](#1주차-3월-13일-강의-내용)
 
