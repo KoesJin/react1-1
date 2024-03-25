@@ -147,10 +147,13 @@ GitHub
 
 -   npm i gh-pages
 -   package.json -> "homepage": "https://KoesJin.github.io/레포지토리 이름/"
+    ![img1](https://github.com/KoesJin/react1-1/assets/160344942/2c1e7d42-4bc3-43f5-adce-d98fcbf50ad4)
 
 -   deploy": "gh-pages -d build" 를 만들어두면 앞으로 npm run deploy 를 실행하면 gh-pages -d build 를 실행하는 것과 같은 효과
+    <img width="706" alt="img2" src="https://github.com/KoesJin/react1-1/assets/160344942/474931cc-e7f2-4219-acd2-3fe9b6c33a36">
 
 4. gh-pages 배포하고 레포지토리에서 다시 설정하기
 
 -   npm run deploy
 -   시간 지나고 배포 완료 표시 나올 시 gh pages 이용가능
+    <img width="709" alt="img3" src="https://github.com/KoesJin/react1-1/assets/160344942/221d56b1-9f23-4dc5-9456-2a0795415761">
