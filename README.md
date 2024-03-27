@@ -192,7 +192,7 @@ GitHub Push
 -   자바스크립트 문법에 XML과 HTML을 섞어서 사용
 -   만일 html이나 xml에 자바스크립트 코드를 사용하고 싶으면 {} 괄호 사용
 -   만일 태그의 속성값을 넣고 싶을떄는 다음과 같이 사용
-    => <img src={user.avatarUrl}></img>
+    <!-- <img src={user.avatarUrl}></img> -->
 
 ### 5. JSX 실습 코딩
 
