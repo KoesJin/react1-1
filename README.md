@@ -258,7 +258,7 @@ GitHub Push
 
 ## 랜더링된 엘리먼트 업데이트 하기
 
-![2024  3  15  - 0](https://github.com/KoesJin/react1-1/assets/160344942/b811dba7-42ec-4151-a2ac-06a8c769729b)
+![2024  3  15  - 0 2](https://github.com/KoesJin/react1-1/assets/160344942/b7f97be3-3536-4d57-99d8-af057cdd5a41)
 
 ## 시계 만들기
 
@@ -270,15 +270,6 @@ GitHub Push
     }, 1000);
 
 -   Clock.jsx 생성
-
-    export default function Clock() {
-    return (
-    <div>
-    <h1>안녕 , 리액트!</h1>
-    <h2>현재 시간: {new Date().toLocaleString()}</h2>
-    </div>
-    );
-    }
 
 -   결과
 
