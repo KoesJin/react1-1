@@ -8,11 +8,13 @@
 
 2️⃣ [2주차](#2주차-3월-20일-강의-내용)
 
+3️⃣ [3주차](#3주차-3월-27일-강의-내용)
+
 # 1주차 (3월 13일 강의 내용)
 
 ## GitHub push 하기
 
-GitHub
+GitHub Push
 
 ### 저장소 생성 및 연결
 
@@ -177,3 +179,27 @@ GitHub
 -   index.js
 
 <img width="915" alt="스크린샷 2024-03-27 오전 10 47 43" src="https://github.com/KoesJin/react1-1/assets/160344942/613d06f4-39b9-47fa-b992-8d748b6413c2">
+
+3. JSX의 장점
+
+-   JSX 이용하여 JS보다 코드가 간결
+-   가독성 향상
+-   Injection Attack 이라 불리는 해킹 방법을 방어함으로써 보안에 강함
+
+4. JSX 사용법
+
+-   모든 자바스크립트 문법을 지원
+-   자바스크립트 문법에 XML과 HTML을 섞어서 사용
+-   만일 html이나 xml에 자바스크립트 코드를 사용하고 싶으면 {} 괄호 사용
+-   만일 태그의 속성값을 넣고 싶을떄는 다음과 같이 사용
+    => <img src={user.avatarUrl}></img>
+
+5. JSX 실습 코딩
+
+-   ch_03 폴더 생성
+
+-   Book.jsx 파일 생성
+    <img width="899" alt="스크린샷 2024-03-27 오전 11 21 38" src="https://github.com/KoesJin/react1-1/assets/160344942/70ab71c6-7056-4d95-92f6-957dd326a1f9">
+
+-   Library.jsx 파일 생성
+    <img width="860" alt="스크린샷 2024-03-27 오전 11 27 43" src="https://github.com/KoesJin/react1-1/assets/160344942/500d2d9f-6fb0-4d28-b491-8f895fb955fa">
