@@ -205,4 +205,19 @@ GitHub Push
     <img width="860" alt="스크린샷 2024-03-27 오전 11 27 43" src="https://github.com/KoesJin/react1-1/assets/160344942/500d2d9f-6fb0-4d28-b491-8f895fb955fa">
 
 -   결과
-    <img width="2" alt="스크린샷 2024-03-27 오전 11 46 58" src="https://github.com/KoesJin/react1-1/assets/160344942/f61e4ae6-34da-4c51-aa3a-c72851828c74">
+    <img width="1710" alt="스크린샷 2024-03-27 오후 12 03 37" src="https://github.com/KoesJin/react1-1/assets/160344942/81d20b31-830d-47db-8c82-800af808a47e">
+
+## 엘리먼트에 대해 알아보기
+
+1. 엘리먼트의 정의
+
+-   엘리먼트는 리액트 앱을 구성하는 요소
+-   공식페이지에는 "엘리먼트는 리액트 앱의 가장 작은 빌딩 블록들" 이라고 설명
+-   웹사이트의 경우에는 DOM 엘리먼트이며 HTML 요소를 의미
+
+### 리액트 엘리먼트와 DOM 엘리먼트 차이?
+
+-   리액트 엘리먼트는 Virtual DOM의 형태
+-   DOm 엘리먼트는 페이지의 모든 정보를 가지고 있어 무거움
+
+![2024  3  15  - 0](https://github.com/KoesJin/react1-1/assets/160344942/b811dba7-42ec-4151-a2ac-06a8c769729b)
