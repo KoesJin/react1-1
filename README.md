@@ -121,8 +121,6 @@ GitHub
 
 ## create-react-app (CRA) 생성 방법
 
-### creat-react-app 생성 방법
-
 1. Node.js 설치 (맥의 경우 brew install node 윈도우의 경우 사이트가서 설치)
 2. npm 설치 (npm install -g npm brew로 설치시 npm 자동 설치)
 3. npm 버전 확인 npm -v
@@ -157,3 +155,25 @@ GitHub
 -   npm run deploy
 -   시간 지나고 배포 완료 표시 나올 시 gh pages 이용가능
     <img width="709" alt="img3" src="https://github.com/KoesJin/react1-1/assets/160344942/221d56b1-9f23-4dc5-9456-2a0795415761">
+
+# 3주차 (3월 27일 강의 내용)
+
+## JSX
+
+-   JavaScipt에 XML을 추가한 확장 문법.
+
+1. JSX의 역할
+
+-   JSX는 내부적으로 XML/HTML 코드를 자바스크립트로 변환
+-   React가 creatElement 함수를 사용하여 자동으로 자바스크립트로 변환
+-   만일 JS 작업할 경우 직접 creatElemnet 함수를 사용해야 함
+-   JSX는 가독성을 높여주는 역할
+
+### props 이용 값 넘기기
+
+-   Hello.jsx
+    <img width="787" alt="스크린샷 2024-03-27 오전 10 47 14" src="https://github.com/KoesJin/react1-1/assets/160344942/67e36b88-9df0-4a6e-ae17-1f522db09fde">
+
+-   index.js
+
+<img width="915" alt="스크린샷 2024-03-27 오전 10 47 43" src="https://github.com/KoesJin/react1-1/assets/160344942/613d06f4-39b9-47fa-b992-8d748b6413c2">
