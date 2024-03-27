@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
 import reportWebVitals from './reportWebVitals';
-//import Hello from './Hello';
-import Library from './ch_03/Library';
+import Clock from './ch_03/Clock';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Library />);
+setInterval(() => {
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Clock />);
+}, 1000);
 
 reportWebVitals();

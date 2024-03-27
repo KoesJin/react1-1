@@ -164,14 +164,14 @@ GitHub Push
 
 -   JavaScipt에 XML을 추가한 확장 문법.
 
-1. JSX의 역할
+### 1. JSX의 역할
 
 -   JSX는 내부적으로 XML/HTML 코드를 자바스크립트로 변환
 -   React가 creatElement 함수를 사용하여 자동으로 자바스크립트로 변환
 -   만일 JS 작업할 경우 직접 creatElemnet 함수를 사용해야 함
 -   JSX는 가독성을 높여주는 역할
 
-### props 이용 값 넘기기
+### 2. props 이용 값 넘기기
 
 -   Hello.jsx
     <img width="787" alt="스크린샷 2024-03-27 오전 10 47 14" src="https://github.com/KoesJin/react1-1/assets/160344942/67e36b88-9df0-4a6e-ae17-1f522db09fde">
@@ -180,13 +180,13 @@ GitHub Push
 
 <img width="915" alt="스크린샷 2024-03-27 오전 10 47 43" src="https://github.com/KoesJin/react1-1/assets/160344942/613d06f4-39b9-47fa-b992-8d748b6413c2">
 
-3. JSX의 장점
+### 3. JSX의 장점
 
 -   JSX 이용하여 JS보다 코드가 간결
 -   가독성 향상
 -   Injection Attack 이라 불리는 해킹 방법을 방어함으로써 보안에 강함
 
-4. JSX 사용법
+### 4. JSX 사용법
 
 -   모든 자바스크립트 문법을 지원
 -   자바스크립트 문법에 XML과 HTML을 섞어서 사용
@@ -194,7 +194,7 @@ GitHub Push
 -   만일 태그의 속성값을 넣고 싶을떄는 다음과 같이 사용
     => <img src={user.avatarUrl}></img>
 
-5. JSX 실습 코딩
+### 5. JSX 실습 코딩
 
 -   ch_03 폴더 생성
 
@@ -209,7 +209,7 @@ GitHub Push
 
 ## 엘리먼트에 대해 알아보기
 
-1. 엘리먼트의 정의
+### 1. 엘리먼트의 정의
 
 -   엘리먼트는 리액트 앱을 구성하는 요소
 -   공식페이지에는 "엘리먼트는 리액트 앱의 가장 작은 빌딩 블록들" 이라고 설명
@@ -218,6 +218,68 @@ GitHub Push
 ### 리액트 엘리먼트와 DOM 엘리먼트 차이?
 
 -   리액트 엘리먼트는 Virtual DOM의 형태
--   DOm 엘리먼트는 페이지의 모든 정보를 가지고 있어 무거움
+-   DOM 엘리먼트는 페이지의 모든 정보를 가지고 있어 무거움
 
 ![2024  3  15  - 0](https://github.com/KoesJin/react1-1/assets/160344942/b811dba7-42ec-4151-a2ac-06a8c769729b)
+
+### 2. 엘리먼트의 생김새
+
+-   리액트 엘리먼트는 자바스크립트 형태로 존재
+-   컴포넌트 , 속성 및 내부의 모든 childeren을 포함하는 일반 js 객체
+-   이 객체는 마음대로 변경할 수 없는 불변성 가짐
+-   리액트 엘리먼트의 예를 보면 type에 태그 대신 리액트 컴포넌트가 들어가 있는것 외에는 차이가 없다
+-   역시 자바스크립트 객체이다
+-   @내부적으로 자바스크립트 객체를 만드는 역할을 하는 함수가 createElement()이다
+
+### 3.엘리먼트의 특징
+
+-   리액트 엘리먼트의 가장 큰 특징은 불변성이다. 즉 한번 생성된 엘리먼트의 childern이나 속성을 변경 불가
+
+### 만일 내용이 바뀌면 어떻게?
+
+-   이떄는 컴포넌트를 통해 새로운 엘리먼트를 생성
+-   그 다음 이전 엘리먼트와 교체를 하는 방법으로 내용을 바꾸는 것
+-   이렇게 교체하는 작업을 하기위해 Virtual DOM을 사용
+
+## Root DOM node
+
+-   Html 코드는 id 값이 root인 태그로 단순하지만 리액트에 필수로 들어가는 아주 중요한 코드
+-   div태그 안에 리액트 엘리먼트가 렌더링 되며, 이것을 Root DOM node 라 함
+
+### 엘리먼트를 렌더링하기 위해서는 다음과 같은 코드가 필요
+
+-   const element = <h1>안녕 리액트!</h1>
+-   ReactDOM.render(element, document.getElemnetById("root));
+
+이떄 render()함수를 사용
+이 함수의 첫번째 파라메터에 출력할 리액트 엘리먼트이고, 두번째 파라미터는 출력할 타겟을 나타냄
+
+즉 리액트 랜더링의 과정은 Virtual DOM에서 실제로 DOM으로 이동하는 과정
+
+## 랜더링된 엘리먼트 업데이트 하기
+
+![2024  3  15  - 0](https://github.com/KoesJin/react1-1/assets/160344942/b811dba7-42ec-4151-a2ac-06a8c769729b)
+
+## 시계 만들기
+
+-   index.js 수정
+
+    setInterval(() => {
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Clock />);
+    }, 1000);
+
+-   Clock.jsx 생성
+
+    export default function Clock() {
+    return (
+    <div>
+    <h1>안녕 , 리액트!</h1>
+    <h2>현재 시간: {new Date().toLocaleString()}</h2>
+    </div>
+    );
+    }
+
+-   결과
+
+<img width="1710" alt="스크린샷 2024-03-27 오후 12 45 55" src="https://github.com/KoesJin/react1-1/assets/160344942/06422fc4-6820-46a4-8971-eb7b93639b7f">
