@@ -203,3 +203,6 @@ GitHub Push
 
 -   Library.jsx 파일 생성
     <img width="860" alt="스크린샷 2024-03-27 오전 11 27 43" src="https://github.com/KoesJin/react1-1/assets/160344942/500d2d9f-6fb0-4d28-b491-8f895fb955fa">
+
+-   결과
+    <img width="2" alt="스크린샷 2024-03-27 오전 11 46 58" src="https://github.com/KoesJin/react1-1/assets/160344942/f61e4ae6-34da-4c51-aa3a-c72851828c74">
