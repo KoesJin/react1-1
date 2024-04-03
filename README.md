@@ -307,3 +307,5 @@ GitHub Push
 -   Impure함수는 인수로 받은 정보가 함수 내부에서 변하는 함수 입니다
 
 ### 3. Props 사용법
+
+![2024  3  15  - 0 6](https://github.com/KoesJin/react1-1/assets/160344942/e35aee7c-4d8a-42a6-b288-1f62c1acdcd7)
