@@ -5,6 +5,12 @@ import reportWebVitals from './reportWebVitals';
 import Welcome from './ch_03/wel';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Welcome name={'진석'} />);
+root.render(
+    <div>
+        <Welcome name="진석" />
+        <Welcome name="KJS" />
+        <Welcome name="Seok" />
+    </div>
+);
 
 reportWebVitals();

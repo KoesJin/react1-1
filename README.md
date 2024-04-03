@@ -10,6 +10,8 @@
 
 3️⃣ [3주차](#3주차-3월-27일-강의-내용)
 
+4️⃣ [4주차](#4주차-4월-3일-강의-내용)
+
 # 1주차 (3월 13일 강의 내용)
 
 ## GitHub push 하기
@@ -306,6 +308,7 @@ GitHub Push
 -   Pure함수는 인수로 받은 정보가 함수 내부에서도 변하지 않는 함수입니다.
 -   Impure함수는 인수로 받은 정보가 함수 내부에서 변하는 함수 입니다
 
+<hr>
 ### 3. Props 사용법
 
 ![2024  3  15  - 0 6](https://github.com/KoesJin/react1-1/assets/160344942/e35aee7c-4d8a-42a6-b288-1f62c1acdcd7)
@@ -338,6 +341,17 @@ GitHub Push
 
 ![2024  3  15  - 0 11](https://github.com/KoesJin/react1-1/assets/160344942/25b740b8-7202-4933-b2ba-449114bb654a)
 
+<hr>
 -   결과
 
 <img width="1710" alt="스크린샷 2024-04-03 오전 10 39 06" src="https://github.com/KoesJin/react1-1/assets/160344942/cadf3bac-63ab-46e5-a73e-3e93ab655bc2">
+
+### 4. 컴포넌트 합성
+
+-   여러 컴포넌트 사용시 <> </> Fragment 사용해야함
+
+<img width="910" alt="스크린샷 2024-04-03 오전 11 06 37" src="https://github.com/KoesJin/react1-1/assets/160344942/8d9edec0-93ba-48b9-9aac-299c4f5b4b71">
+
+### 5. 컴포넌트 추출
+
+<img width="910" alt="스크린샷 2024-04-03 오전 11 13 02" src="https://github.com/KoesJin/react1-1/assets/160344942/1d7f3193-fe10-4629-9780-6f1c11232225">
