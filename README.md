@@ -4,7 +4,7 @@
 
 ⭐️⭐️ [Github Pages 배포](#create-react-app-github-pages-배포)
 
-## 수업 소스코드
+🔥 수업 소스코드
 
 -   https://github.com/soaple/first-met-react-practice-v18
 
