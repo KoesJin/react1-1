@@ -4,15 +4,19 @@
 
 ⭐️⭐️ [Github Pages 배포](#create-react-app-github-pages-배포)
 
-1️⃣ [1주차](#1주차-3월-13일-강의-내용)
+## 수업 소스코드
 
-2️⃣ [2주차](#2주차-3월-20일-강의-내용)
+-   https://github.com/soaple/first-met-react-practice-v18
 
-3️⃣ [3주차](#3주차-3월-27일-강의-내용)
+1️⃣ [2주차](#2주차-3월-13일-강의-내용)
 
-4️⃣ [4주차](#4주차-4월-3일-강의-내용)
+2️⃣ [3주차](#3주차-3월-20일-강의-내용)
 
-# 1주차 (3월 13일 강의 내용)
+3️⃣ [4주차](#4주차-3월-27일-강의-내용)
+
+4️⃣ [5주차](#5주차-4월-3일-강의-내용)
+
+# 2주차 (3월 13일 강의 내용)
 
 ## GitHub push 하기
 
@@ -80,7 +84,7 @@ GitHub Push
 -   git stash pop : 마지막 나타나게 함.
 -   git commit —amend 가장 최근의 커밋을 수정할 수 있음. 주로 커밋이름 바꿀 때 씀.
 
-# 2주차 (3월 20일 강의 내용)
+# 3주차 (3월 20일 강의 내용)
 
 ## 리액트의 장점
 
@@ -160,7 +164,7 @@ GitHub Push
 -   시간 지나고 배포 완료 표시 나올 시 gh pages 이용가능
     <img width="709" alt="img3" src="https://github.com/KoesJin/react1-1/assets/160344942/221d56b1-9f23-4dc5-9456-2a0795415761">
 
-# 3주차 (3월 27일 강의 내용)
+# 4주차 (3월 27일 강의 내용)
 
 ## JSX
 
@@ -277,7 +281,7 @@ GitHub Push
 
 <img width="1710" alt="스크린샷 2024-03-27 오후 12 45 55" src="https://github.com/KoesJin/react1-1/assets/160344942/06422fc4-6820-46a4-8971-eb7b93639b7f">
 
-# 4주차 (4월 3일 강의 내용)
+# 5주차 (4월 3일 강의 내용)
 
 ## 1. 컴포넌트에 대해 알아보기
 
@@ -342,6 +346,7 @@ GitHub Push
 ![2024  3  15  - 0 11](https://github.com/KoesJin/react1-1/assets/160344942/25b740b8-7202-4933-b2ba-449114bb654a)
 
 <hr>
+
 -   결과
 
 <img width="1710" alt="스크린샷 2024-04-03 오전 10 39 06" src="https://github.com/KoesJin/react1-1/assets/160344942/cadf3bac-63ab-46e5-a73e-3e93ab655bc2">
@@ -373,3 +378,118 @@ GitHub Push
 -   결과
 
 <img width="1710" alt="스크린샷 2024-04-03 오전 11 53 02" src="https://github.com/KoesJin/react1-1/assets/160344942/f260625f-c397-4a2b-8638-2e182965e9d9">
+
+<hr>
+-   위에 코드가 별로이기에 수정 하면 좋은 코드
+
+<img width="908" alt="스크린샷 2024-04-03 오후 12 04 55" src="https://github.com/KoesJin/react1-1/assets/160344942/715f9858-8694-419c-8e95-4451a988ec70">
+
+<hr>
+
+## 6. State
+
+### 6.1 State란?
+
+• State는 리액트 컴포넌트의 상태를 의미합니다.
+• 상태의 의미는 정상인지 비정상인지가 아니라 컴포넌트의 데이터를 의미합니다.
+• 정확히는 컴포넌트의 변경가능한 데이터를 의미합니다.
+• State가 변하면 다시 렌더링이 되기 때문에 렌더링과 관련된 값만 state에 포함시켜야 합니다.
+
+### 2. state의 특징
+
+• 리액트 만의 특별한 형태가 아닌 단지 자바스크립트 객체일 뿐입니다.
+• 예의 LikeButton은 class 컴포넌트입니다.
+• constructor는 생성자이고 그 안에 있는
+• this.state가 현 컴포넌트의 state입니다.
+
+-   함수형 에서는 useState()라는 함수 사용합니다.
+<hr>
+-   변경 할 경우 직접 X -> setState 함수 이용
+
+<img width="798" alt="스크린샷 2024-04-03 오후 12 11 45" src="https://github.com/KoesJin/react1-1/assets/160344942/59527e8f-a037-4cf6-b574-503a3a1c916a">
+
+-   component vs element vs instance
+
+<img width="888" alt="스크린샷 2024-04-03 오후 12 13 53" src="https://github.com/KoesJin/react1-1/assets/160344942/580d1f59-744f-44ac-b209-a354888a39fb">
+
+## 6.2 생성주기
+
+<img width="869" alt="스크린샷 2024-04-03 오후 12 14 44" src="https://github.com/KoesJin/react1-1/assets/160344942/c842e66f-2dc2-48b7-9296-b8b1c6dd5d5b">
+
+<hr>
+
+## 6.3 state와 생명주기 함수 사용하기
+
+<img width="888" alt="스크린샷 2024-04-03 오후 12 20 32" src="https://github.com/KoesJin/react1-1/assets/160344942/4ea962f9-3b84-4bd2-bd80-bdaef2728eec">
+
+-   다음
+
+<img width="894" alt="스크린샷 2024-04-03 오후 12 22 13" src="https://github.com/KoesJin/react1-1/assets/160344942/13d96cd2-29fe-4e35-a8b8-d01ece83430d">
+
+-   다음
+
+<img width="899" alt="스크린샷 2024-04-03 오후 12 23 38" src="https://github.com/KoesJin/react1-1/assets/160344942/d8692262-1e71-4219-8449-09a8e5c65339">
+
+-   다음
+
+<img width="758" alt="스크린샷 2024-04-03 오후 12 23 58" src="https://github.com/KoesJin/react1-1/assets/160344942/46cf5066-1e71-49f8-9d16-ea21f8db0dc2">
+
+<hr>
+
+## state와 생명주기 함수 클래스형 컴포넌트에서 함수형 컴포넌트로 변경
+
+```import React, { useState, useEffect } from 'react';
+import Notification from './Notification';
+
+const reservedNotifications = [
+{
+id: 1,
+message: '안녕하세요, 오늘 일정을 알려드립니다.',
+},
+{
+id: 2,
+message: '점심식사 시간입니다.',
+},
+{
+id: 3,
+message: '이제 곧 미팅이 시작됩니다.',
+},
+];
+
+function NotificationList() {
+const [notifications, setNotifications] = useState([]);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setNotifications((prevNotifications) => {
+                if (prevNotifications.length < reservedNotifications.length) {
+                    const index = prevNotifications.length;
+                    return [...prevNotifications, reservedNotifications[index]];
+                } else {
+                    clearInterval(timer);
+                    return [];
+                }
+            });
+        }, 1000);
+
+        return () => {
+            clearInterval(timer);
+        };
+    }, []);
+
+    return (
+        <div>
+            {notifications.map((notification) => (
+                <Notification key={notification.id} id={notification.id} message={notification.message} />
+            ))}
+        </div>
+    );
+
+}
+
+export default NotificationList;
+```
+
+-   결과
+
+<img width="1710" alt="스크린샷 2024-04-03 오후 12 41 03" src="https://github.com/KoesJin/react1-1/assets/160344942/caefc96f-05d6-4a19-a121-8c683551366b">
