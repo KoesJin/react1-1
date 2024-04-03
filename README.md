@@ -313,3 +313,31 @@ GitHub Push
 <hr>
 
 ![2024  3  15  - 0 7](https://github.com/KoesJin/react1-1/assets/160344942/041f3989-42c3-445b-9cfd-f3737e468e9c)
+
+<hr>
+
+-   JSX 사용 하지 않을 경우
+
+![2024  3  15  - 0 8](https://github.com/KoesJin/react1-1/assets/160344942/6e90f6ee-c16b-4ec5-9e67-89d63d0e0eee)
+
+## 3. 컴포넌트 만들기
+
+-   Hook 개념 도입 -> 함수형 컴포넌트 사용
+
+![2024  3  15  - 0 9](https://github.com/KoesJin/react1-1/assets/160344942/f614fc40-7102-45bb-b519-6325dfb9cb86)
+
+<hr>
+
+-   함수형 컴포넌트 & 클래스 컴포넌트
+
+![2024  3  15  - 0 10](https://github.com/KoesJin/react1-1/assets/160344942/7acd74e1-f46a-410c-b892-464235580cc0)
+
+<hr>
+
+## 4.컴포넌트 이름 짓기 & 컴포넌트의 랜더링
+
+![2024  3  15  - 0 11](https://github.com/KoesJin/react1-1/assets/160344942/25b740b8-7202-4933-b2ba-449114bb654a)
+
+-   결과
+
+<img width="1710" alt="스크린샷 2024-04-03 오전 10 39 06" src="https://github.com/KoesJin/react1-1/assets/160344942/cadf3bac-63ab-46e5-a73e-3e93ab655bc2">
