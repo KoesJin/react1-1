@@ -346,12 +346,30 @@ GitHub Push
 
 <img width="1710" alt="스크린샷 2024-04-03 오전 10 39 06" src="https://github.com/KoesJin/react1-1/assets/160344942/cadf3bac-63ab-46e5-a73e-3e93ab655bc2">
 
-### 4. 컴포넌트 합성
+### 1. 컴포넌트 합성
 
 -   여러 컴포넌트 사용시 <> </> Fragment 사용해야함
 
 <img width="910" alt="스크린샷 2024-04-03 오전 11 06 37" src="https://github.com/KoesJin/react1-1/assets/160344942/8d9edec0-93ba-48b9-9aac-299c4f5b4b71">
 
-### 5. 컴포넌트 추출
+### 2. 컴포넌트 추출
 
 <img width="910" alt="스크린샷 2024-04-03 오전 11 13 02" src="https://github.com/KoesJin/react1-1/assets/160344942/1d7f3193-fe10-4629-9780-6f1c11232225">
+
+<hr>
+
+<img width="897" alt="스크린샷 2024-04-03 오전 11 20 01" src="https://github.com/KoesJin/react1-1/assets/160344942/acc1c48a-d7b0-484f-bba9-f62498b60552">
+
+<hr>
+
+<img width="898" alt="스크린샷 2024-04-03 오전 11 22 21" src="https://github.com/KoesJin/react1-1/assets/160344942/066d7bfa-13b2-4248-b12d-c7b2cf9e3ae9">
+
+## 6. 댓글 컴포넌트 만들기
+
+<img width="854" alt="스크린샷 2024-04-03 오전 11 25 27" src="https://github.com/KoesJin/react1-1/assets/160344942/5ddf832d-fdb9-4d16-a848-96260add79c5">
+
+<hr>
+
+-   결과
+
+<img width="1710" alt="스크린샷 2024-04-03 오전 11 53 02" src="https://github.com/KoesJin/react1-1/assets/160344942/f260625f-c397-4a2b-8638-2e182965e9d9">
