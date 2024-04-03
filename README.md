@@ -275,7 +275,7 @@ GitHub Push
 
 <img width="1710" alt="스크린샷 2024-03-27 오후 12 45 55" src="https://github.com/KoesJin/react1-1/assets/160344942/06422fc4-6820-46a4-8971-eb7b93639b7f">
 
-# 4주차 강의
+# 4주차 (4월 3일 강의 내용)
 
 ## 1. 컴포넌트에 대해 알아보기
 
@@ -309,3 +309,7 @@ GitHub Push
 ### 3. Props 사용법
 
 ![2024  3  15  - 0 6](https://github.com/KoesJin/react1-1/assets/160344942/e35aee7c-4d8a-42a6-b288-1f62c1acdcd7)
+
+<hr>
+
+![2024  3  15  - 0 7](https://github.com/KoesJin/react1-1/assets/160344942/041f3989-42c3-445b-9cfd-f3737e468e9c)
