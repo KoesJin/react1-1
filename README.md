@@ -516,3 +516,25 @@ export default NotificationList;
 ## 7.2 useState
 
 <img width="864" alt="스크린샷 2024-04-17 오전 10 36 03" src="https://github.com/KoesJin/react1-1/assets/160344942/4cfda70b-a130-4dfc-9a5d-82b192285e57">
+
+### useState 사용 예제
+
+```
+import React, { useState } from 'react';
+
+export default function Counter() {
+    const [count, setCount] = useState(0);
+
+    const onclick = () => {
+        setCount(count + 1);
+    };
+
+    return (
+        <>
+            <p>총 {count} 번 클릭했습니다.</p>
+            <button onClick={onclick}>클릭</button>
+        </>
+    );
+}
+
+```
