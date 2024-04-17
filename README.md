@@ -616,6 +616,8 @@ export default function FocusBtn(props) {
 
 <hr>
 
+-   결과
+
 <img width="1710" alt="스크린샷 2024-04-17 오후 12 24 55" src="https://github.com/KoesJin/react1-1/assets/160344942/7bbd1aec-51c5-4c4b-b229-b9afebdc319c">
 
 <hr>
