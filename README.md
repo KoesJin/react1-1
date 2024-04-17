@@ -15,6 +15,10 @@ https://github.com/soaple/first-met-react-practice-v18
 
 4️⃣ [5주차](#5주차-4월-3일-강의-내용)
 
+5️⃣ [6주차](보강)
+
+6️⃣ [7주차](#7주차-4월-17일-강의-내용)
+
 # 2주차 (3월 13일 강의 내용)
 
 ## GitHub push 하기
@@ -492,3 +496,23 @@ export default NotificationList;
 -   결과
 
 <img width="1710" alt="스크린샷 2024-04-03 오후 12 41 03" src="https://github.com/KoesJin/react1-1/assets/160344942/caefc96f-05d6-4a19-a121-8c683551366b">
+
+# 6주차 (휴강)
+
+<hr>
+
+# 7주차 (4월 17일 강의 내용)
+
+-   결과코드 분석
+
+<img width="807" alt="스크린샷 2024-04-17 오전 10 14 47" src="https://github.com/KoesJin/react1-1/assets/160344942/d836cbd4-7784-457d-94f1-ef2b90b55e75">
+
+<hr>
+
+## 7.1 훅이란 무엇인가?
+
+<img width="883" alt="스크린샷 2024-04-17 오전 10 31 51" src="https://github.com/KoesJin/react1-1/assets/160344942/32c1ad32-3740-4350-8947-1d41955603c1">
+
+## 7.2 useState
+
+<img width="864" alt="스크린샷 2024-04-17 오전 10 36 03" src="https://github.com/KoesJin/react1-1/assets/160344942/4cfda70b-a130-4dfc-9a5d-82b192285e57">
