@@ -1,9 +1,9 @@
-import Counter from './ch_07/Counter';
+import FocusBtn from './ch_07/FocusBtn';
 
 function App() {
     return (
         <>
-            <Counter />
+            <FocusBtn />
         </>
     );
 }

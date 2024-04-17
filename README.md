@@ -15,7 +15,7 @@ https://github.com/soaple/first-met-react-practice-v18
 
 4️⃣ [5주차](#5주차-4월-3일-강의-내용)
 
-5️⃣ [6주차](보강)
+5️⃣ [6주차] 휴강
 
 6️⃣ [7주차](#7주차-4월-17일-강의-내용)
 
@@ -573,6 +573,32 @@ export default function Counter() {
 
 <img width="882" alt="스크린샷 2024-04-17 오전 11 47 06" src="https://github.com/KoesJin/react1-1/assets/160344942/77a75a4e-c728-44ed-a94e-294360df9bf6">
 
+<hr>
+
 ## 7.5 useCallback
 
 <img width="788" alt="스크린샷 2024-04-17 오전 11 49 02" src="https://github.com/KoesJin/react1-1/assets/160344942/1a338c96-0074-499e-89c8-e28c6919a385">
+
+<hr>
+
+## 7.6 useRef
+
+<img width="895" alt="스크린샷 2024-04-17 오후 12 10 23" src="https://github.com/KoesJin/react1-1/assets/160344942/4be03844-2387-44d2-904a-d017b0922474">
+
+<hr>
+
+## 7.7 훅의 규칙
+
+<img width="885" alt="스크린샷 2024-04-17 오후 12 13 15" src="https://github.com/KoesJin/react1-1/assets/160344942/cb62fcd1-6f01-42b9-9ada-7514b0963799">
+
+<hr>
+
+### useRef 예제코드
+
+<img width="822" alt="스크린샷 2024-04-17 오후 12 24 21" src="https://github.com/KoesJin/react1-1/assets/160344942/e8bd63b4-7f72-4c2b-96c7-b7b7786cd374">
+
+<hr>
+
+<img width="1710" alt="스크린샷 2024-04-17 오후 12 24 55" src="https://github.com/KoesJin/react1-1/assets/160344942/7bbd1aec-51c5-4c4b-b229-b9afebdc319c">
+
+<hr>
