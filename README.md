@@ -595,7 +595,24 @@ export default function Counter() {
 
 ### useRef 예제코드
 
-<img width="822" alt="스크린샷 2024-04-17 오후 12 24 21" src="https://github.com/KoesJin/react1-1/assets/160344942/e8bd63b4-7f72-4c2b-96c7-b7b7786cd374">
+```
+import React, { useRef } from 'react';
+
+export default function FocusBtn(props) {
+    const inputElem = useRef(null);
+
+    const onButtonClick = () => {
+        inputElem.current.focus();
+    };
+
+    return (
+        <>
+            <input ref={inputElem} type="text" />
+            <button onClick={onButtonClick}>Focus the Button</button>
+        </>
+    );
+}
+```
 
 <hr>
 
