@@ -538,3 +538,41 @@ export default function Counter() {
 }
 
 ```
+
+-   결과
+
+<img width="1710" alt="스크린샷 2024-04-17 오전 10 48 12" src="https://github.com/KoesJin/react1-1/assets/160344942/8d7f6514-14a5-4a4d-9a5d-7bcd31201f42">
+
+<hr>
+
+## useEffect
+
+<img width="898" alt="스크린샷 2024-04-17 오전 11 10 52" src="https://github.com/KoesJin/react1-1/assets/160344942/f67ecef8-01ca-4949-b77f-2769c2967469">
+
+<hr>
+
+<img width="881" alt="스크린샷 2024-04-17 오전 11 14 28" src="https://github.com/KoesJin/react1-1/assets/160344942/f72e79e0-037e-44b9-92f7-85c354fb5c95">
+
+<hr>
+
+<img width="862" alt="스크린샷 2024-04-17 오전 11 19 03" src="https://github.com/KoesJin/react1-1/assets/160344942/dd123856-9e28-40da-894a-3873c91df174">
+
+<hr>
+
+<img width="865" alt="스크린샷 2024-04-17 오전 11 23 17" src="https://github.com/KoesJin/react1-1/assets/160344942/0a797eb9-adc4-467d-a844-bee76767d1d5">
+
+<hr>
+
+<img width="866" alt="스크린샷 2024-04-17 오전 11 42 20" src="https://github.com/KoesJin/react1-1/assets/160344942/2ab7be4b-70b1-4ff1-b03f-2263e48d90af">
+
+## useMemo
+
+<img width="844" alt="스크린샷 2024-04-17 오전 11 43 07" src="https://github.com/KoesJin/react1-1/assets/160344942/f7cb366e-d42b-4718-aa4b-2b84069d4758">
+
+<hr>
+
+<img width="882" alt="스크린샷 2024-04-17 오전 11 47 06" src="https://github.com/KoesJin/react1-1/assets/160344942/77a75a4e-c728-44ed-a94e-294360df9bf6">
+
+## 7.5 useCallback
+
+<img width="788" alt="스크린샷 2024-04-17 오전 11 49 02" src="https://github.com/KoesJin/react1-1/assets/160344942/1a338c96-0074-499e-89c8-e28c6919a385">
