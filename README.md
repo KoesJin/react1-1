@@ -497,6 +497,8 @@ export default NotificationList;
 
 <img width="1710" alt="스크린샷 2024-04-03 오후 12 41 03" src="https://github.com/KoesJin/react1-1/assets/160344942/caefc96f-05d6-4a19-a121-8c683551366b">
 
+<hr>
+
 # 6주차 (휴강)
 
 <hr>
