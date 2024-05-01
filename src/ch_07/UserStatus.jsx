@@ -1,20 +1,9 @@
-import { useEffect, useState } from 'react';
+import useUserStatus from './useUserStatus';
 
 export default function UserStatus(props) {
-    const [isOnline, setIsOnline] = useState(null);
+    const isOnline = useUserStatus(props.user.id);
 
-    useEffect(() => {
-        function handleStatusChange(status) {
-            setIsOnline(status.setIsOnline);
-        }
-
-        ServerAPI.subscribeUserStatus(props.user.id.handleStatusChange);
-        return () => {
-            ServerAPI.subscribeUserStatus(props.user.id.handleStatusChange);
-        };
-    });
-
-    if (isOnline == null) {
+    if (isOnline === null) {
         return '대기 중...';
     }
     return isOnline ? '온라인' : '오프라인';

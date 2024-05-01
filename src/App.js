@@ -1,10 +1,10 @@
 // import FocusBtn from './ch_07/FocusBtn';
-import UserStatus from './ch_07/UserStatus';
+import Accommodate from './ch_07/Accommodate';
 
 function App() {
     return (
         <>
-            <UserStatus />
+            <Accommodate />
         </>
     );
 }

@@ -708,3 +708,80 @@ export default function UserListItem(props) {
 <img width="895" alt="스크린샷 2024-05-01 오전 10 49 22" src="https://github.com/KoesJin/react1-1/assets/160344942/304d1127-4291-4b21-9508-386e3696c741">
 
 <hr>
+
+## 추출시 주의사항
+
+<img width="916" alt="스크린샷 2024-05-01 오전 11 10 06" src="https://github.com/KoesJin/react1-1/assets/160344942/499e0a2f-d6ac-4ce5-b2d0-aa5e74512876">
+
+<hr>
+
+## 3. 커스텀 훅 사용하기
+
+<img width="862" alt="스크린샷 2024-05-01 오전 11 11 49" src="https://github.com/KoesJin/react1-1/assets/160344942/95144a51-36b0-4cd7-b7c9-b6d9b7968c0a">
+
+<hr>
+
+## 7.9 훅을 사용한 컴포넌트 개발 (실습)
+
+### useCounter 컴포넌트
+
+```
+import { useState } from 'react';
+
+function useCounter(initialValue) {
+    const [count, setCount] = useState(initialValue);
+
+    const increaseCount = () => setCount((count) => count + 1);
+    const decreaseCount = () => setCount((count) => Math.max(count - 1, 0));
+
+    return [count, increaseCount, decreaseCount];
+}
+
+export default useCounter;
+
+```
+
+<hr>
+
+### Accommodate 컴포넌트
+
+```
+import React, { useState, useEffect } from 'react';
+import useCounter from './useCounter';
+
+const MAX_CAPACITY = 10;
+
+function Accommodate() {
+    const [isFull, setIsFull] = useState(false);
+    const [count, increaseCount, decreaseCount] = useCounter(0);
+
+    useEffect(() => {
+        console.log('======================');
+        console.log('useEffect() is called.');
+        console.log(`isFull: ${isFull}`);
+    });
+
+    useEffect(() => {
+        setIsFull(count >= MAX_CAPACITY);
+        console.log(`Current count value: ${count}`);
+    }, [count]);
+
+    return (
+        <div style={{ padding: 16 }}>
+            <p>{`총 ${count}명 수용했습니다.`}</p>
+
+            <button onClick={increaseCount} disabled={isFull}>
+                입장
+            </button>
+            <button onClick={decreaseCount}>퇴장</button>
+
+            {isFull && <p style={{ color: 'red' }}>정원이 가득찼습니다.</p>}
+        </div>
+    );
+}
+
+export default Accommodate;
+
+```
+
+<hr>
