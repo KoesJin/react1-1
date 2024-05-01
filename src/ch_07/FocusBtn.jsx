@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-export default function FocusBtn(props) {
+export default function FocusBtn() {
     const inputElem = useRef(null);
 
     const onButtonClick = () => {

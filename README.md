@@ -19,6 +19,10 @@ https://github.com/soaple/first-met-react-practice-v18
 
 6️⃣ [7주차](#7주차-4월-17일-강의-내용)
 
+7️⃣ [8주차] 중간고사
+
+8️⃣ [9주차](#9주차-5월-1일-강의-내용)
+
 # 2주차 (3월 13일 강의 내용)
 
 ## GitHub push 하기
@@ -621,5 +625,86 @@ export default function FocusBtn(props) {
 -   결과
 
 <img width="1710" alt="스크린샷 2024-04-17 오후 12 24 55" src="https://github.com/KoesJin/react1-1/assets/160344942/7bbd1aec-51c5-4c4b-b229-b9afebdc319c">
+
+<hr>
+
+# 8주차 (중간고사)
+
+<hr>
+
+# 9주차 (5월 1일 강의 내용)
+
+<img width="915" alt="스크린샷 2024-05-01 오전 10 19 22" src="https://github.com/KoesJin/react1-1/assets/160344942/f2eb49c2-ca6e-4cc6-bd7f-1744a51ca75f">
+
+<hr>
+
+## 7.8 나만의 훅 만들기
+
+<img width="915" alt="스크린샷 2024-05-01 오전 10 22 03" src="https://github.com/KoesJin/react1-1/assets/160344942/9e1ac139-7e43-4c3c-9e8d-001a8bfad246">
+
+<hr>
+
+<img width="909" alt="스크린샷 2024-05-01 오전 10 48 07" src="https://github.com/KoesJin/react1-1/assets/160344942/6031c443-f52e-469d-93df-5d515da3fe87">
+
+<hr>
+
+### UseStatus 컴포넌트
+
+```
+import { useEffect, useState } from 'react';
+
+export default function UserStatus(props) {
+    const [isOnline, setIsOnline] = useState(null);
+
+    useEffect(() => {
+        function handleStatusChange(status) {
+            setIsOnline(status.setIsOnline);
+        }
+
+        ServerAPI.subscribeUserStatus(props.user.id.handleStatusChange);
+        return () => {
+            ServerAPI.subscribeUserStatus(props.user.id.handleStatusChange);
+        };
+    });
+
+    if (isOnline == null) {
+        return '대기 중...';
+    }
+    return isOnline ? '온라인' : '오프라인';
+}
+
+```
+
+<hr>
+
+### UserListItem 컴포넌트
+
+```
+import { useEffect, useState } from 'react';
+
+export default function UserListItem(props) {
+    const [isOnline, setIsOnline] = useState(null);
+
+    useEffect(() => {
+        function handleStatusChange(status) {
+            setIsOnline(status.setIsOnline);
+        }
+
+        ServerAPI.subscribeUserStatus(props.user.id.handleStatusChange);
+        return () => {
+            ServerAPI.subscribeUserStatus(props.user.id.handleStatusChange);
+        };
+    });
+
+    return <li style={{ color: isOnline ? 'green' : 'black' }}>{props.user.name}</li>;
+}
+
+```
+
+<hr>
+
+## 2 커스텀 훅 추출하기
+
+<img width="895" alt="스크린샷 2024-05-01 오전 10 49 22" src="https://github.com/KoesJin/react1-1/assets/160344942/304d1127-4291-4b21-9508-386e3696c741">
 
 <hr>
