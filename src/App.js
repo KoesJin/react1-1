@@ -1,11 +1,15 @@
-// import FocusBtn from './ch_07/FocusBtn';
-import Accommodate from './ch_07/Accommodate';
+// import MainPage from './10w/MainPage';
+// import Toggle from './10w/Toggle';
+
+import LoginControl from './10w/LoginControl';
 
 function App() {
     return (
-        <>
-            <Accommodate />
-        </>
+        <div>
+            {/* <MainPage /> */}
+            {/* <Toggle /> */}
+            <LoginControl />
+        </div>
     );
 }
 

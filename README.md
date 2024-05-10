@@ -785,3 +785,13 @@ export default Accommodate;
 ```
 
 <hr>
+
+## 8.1 이벤트 처리하기
+
+<img width="902" alt="스크린샷 2024-05-01 오후 12 20 07" src="https://github.com/KoesJin/react1-1/assets/160344942/d1145337-2609-4990-9c55-9ea7719b294d">
+
+<hr>
+
+### 이벤트 핸들러 추가
+
+<img width="879" alt="스크린샷 2024-05-01 오후 12 23 21" src="https://github.com/KoesJin/react1-1/assets/160344942/71d27835-7a85-404d-99d8-c8f097274753">
