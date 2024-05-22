@@ -1009,7 +1009,7 @@ function Toolbar(props) {
 export default Toolbar;
 ```
 
-<br>
+<hr>
 
 ### LandingPage.jsx
 
@@ -1049,3 +1049,232 @@ export default LandingPage;
 <hr>
 
 <img width="1710" alt="스크린샷 2024-05-22 오전 10 24 37" src="https://github.com/KoesJin/react1-1/assets/160344942/2a4ff0e3-5719-449b-8469-edffaa00d8f8">
+
+<hr>
+
+## 10.1 리스트와 키란 무엇인가? , 10.2 여러 개의 컴포넌트 렌더링 하기
+
+<img width="918" alt="스크린샷 2024-05-22 오전 11 13 54" src="https://github.com/KoesJin/react1-1/assets/160344942/4b355496-5996-4f65-a39d-e06991b75fb4">
+
+<hr>
+
+## map() 함수 예제
+
+<img width="918" alt="스크린샷 2024-05-22 오전 11 13 54" src="https://github.com/KoesJin/react1-1/assets/160344942/4b355496-5996-4f65-a39d-e06991b75fb4">
+
+<hr>
+
+## 10.3 기본적인 리스트 컴포넌트
+
+<img width="911" alt="스크린샷 2024-05-22 오전 11 23 56" src="https://github.com/KoesJin/react1-1/assets/160344942/a530ec28-b9c5-45b2-b94f-04017a0938aa">
+
+<hr>
+
+### NumberList.jsx
+
+```
+
+export default function NumberList(props) {
+    const { numbers } = props;
+
+    const listItems = numbers.map((number) => <li key={number.toString()}>{number}</li>);
+
+    return <ul>{listItems}</ul>;
+}
+
+```
+
+<hr>
+
+### App.js
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+function App() {
+    return (
+        <div>
+            {/* <LandingPage /> */}
+            <NumberList numbers={numbers} />
+        </div>
+    );
+}
+
+```
+
+-   key props가 없어 문제 발생
+
+<hr>
+
+## 10.4 리스트 키에 대해 알아보기
+
+<img width="897" alt="스크린샷 2024-05-22 오전 11 36 10" src="https://github.com/KoesJin/react1-1/assets/160344942/ccc49a52-6942-42d6-92f7-ce9d47f19383">
+
+<hr>
+
+## 실습
+
+```
+//변겅전
+const listItems = numbers.map((number) => <li>{number}</li>);
+
+//변경후
+const listItems = numbers.map((number) => <li key={number.toString()}>{number}</li>);
+
+//index 사용해서 변경 가능
+ const listItems = numbers.map((number, index) => <li key={index}>{number}</li>);
+```
+
+<hr>
+
+### keyProps 이용 todoList 생성
+
+```
+
+export default function NumberList(props) {
+
+    const todoLists = [
+        {
+            id: 1,
+            todo: '할 일1',
+        },
+        {
+            id: 2,
+            todo: '할 일2',
+        },
+        {
+            id: 3,
+            todo: '할 일3',
+        },
+        {
+            id: 4,
+            todo: '할 일4',
+        },
+        {
+            id: 5,
+            todo: '할 일5',
+        },
+    ];
+
+    const TodoList = todoLists.map((todolist) => <li key={todolist.id}>{todolist.todo}</li>);
+
+    return <ul>{TodoList}</ul>;
+}
+
+
+```
+
+<hr>
+
+### index keyporps 이용 todoList 생성
+
+```
+
+export default function NumberList(props) {
+    // const { numbers } = props;
+
+    const todoLists = [
+        {
+            id: 1,
+            todo: '할 일1',
+        },
+        {
+            id: 2,
+            todo: '할 일2',
+        },
+        {
+            id: 3,
+            todo: '할 일3',
+        },
+        {
+            id: 4,
+            todo: '할 일4',
+        },
+        {
+            id: 5,
+            todo: '할 일5',
+        },
+    ];
+
+    const foos = todoLists.map((foo, index) => <li key={index}>{foo.todo}</li>);
+
+    return (
+        <>
+            <ul>{foos}</ul>
+        </>
+    );
+}
+
+```
+
+<hr>
+
+## 10.5 출석부 실습
+
+### keyProps 사용 x
+
+```
+export default function AttendanceBook(props) {
+    const students = [
+        {
+            name: '홍길동',
+        },
+        {
+            name: '홍길동1',
+        },
+        {
+            name: '홍길동2',
+        },
+        {
+            name: '홍길동3',
+        },
+    ];
+
+    return (
+        <ul>
+            {students.map((student) => (
+                <li>{student.name}</li>
+            ))}
+        </ul>
+    );
+}
+
+```
+
+<hr>
+
+### keyProps 사용
+
+```
+export default function AttendanceBook(props) {
+    const students = [
+        {
+            name: '홍길동',
+        },
+        {
+            name: '홍길동1',
+        },
+        {
+            name: '홍길동2',
+        },
+        {
+            name: '홍길동3',
+        },
+    ];
+
+    return (
+        <ul>
+            {students.map((student, index) => (
+                <li key={index}>{student.name}</li>
+            ))}
+        </ul>
+    );
+}
+
+```
+
+<hr>
+
+## 10.6 마치며
+
+<img width="918" alt="스크린샷 2024-05-22 오전 11 39 50" src="https://github.com/KoesJin/react1-1/assets/160344942/c0a665d2-8255-45a0-891d-e6b5a0502326">
