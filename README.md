@@ -960,3 +960,88 @@ export default function Greeting(props) {
 -   로그인 후
 
 <img width="1710" alt="스크린샷 2024-05-10 오후 5 20 40" src="https://github.com/KoesJin/react1-1/assets/160344942/4bac8166-edb6-4164-a5df-931af109e4a0">
+
+<hr>
+
+# 11주차(휴강)
+
+<hr>
+
+# 12주차(5월 22일 강의 내용)
+
+### Toolbar.jsx
+
+```
+import React from 'react';
+
+const styles = {
+    wrapper: {
+        padding: 16,
+        display: 'flex',
+        flexDirection: 'row',
+        borderBottom: '1px solid grey',
+    },
+    greeting: {
+        marginRight: 8,
+    },
+};
+
+function Toolbar(props) {
+    const { isLoggedIn, onClickLogin, onClickLogout } = props;
+
+    return (
+        <div style={styles.wrapper}>
+            {isLoggedIn && <span style={styles.greeting}>환영합니다!</span>}
+
+            {isLoggedIn ? (
+                <button onClick={onClickLogout}>로그아웃</button>
+            ) : (
+                <button onClick={onClickLogin}>로그인</button>
+            )}
+        </div>
+    );
+}
+
+export default Toolbar;
+```
+
+<br>
+
+### LandingPage.jsx
+
+```
+import React, { useState } from 'react';
+import Toolbar from '../12w/TooBar';
+
+function LandingPage() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const onClickLogin = () => {
+        setIsLoggedIn(true);
+    };
+
+    const onClickLogout = () => {
+        setIsLoggedIn(false);
+    };
+
+    return (
+        <div>
+            <Toolbar isLoggedIn={isLoggedIn} onClickLogin={onClickLogin} onClickLogout={onClickLogout} />
+            <div style={{ padding: 16 }}>KJS 랜딩 페이지</div>
+        </div>
+    );
+}
+
+export default LandingPage;
+
+```
+
+<br>
+
+-결과
+
+<img width="1710" alt="스크린샷 2024-05-22 오전 10 24 33" src="https://github.com/KoesJin/react1-1/assets/160344942/5abf1857-af21-41ab-8c18-7863dfb0378e">
+
+<br>
+
+<img width="1710" alt="스크린샷 2024-05-22 오전 10 24 37" src="https://github.com/KoesJin/react1-1/assets/160344942/2a4ff0e3-5719-449b-8469-edffaa00d8f8">
