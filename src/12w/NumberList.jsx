@@ -31,7 +31,7 @@ export default function NumberList(props) {
 
     //const TodoList = todoLists.map((todolist) => <li key={todolist.id}>{todolist.todo}</li>);
 
-    const foos = todoLists.map((foo, index) => <li key={index}>{foo.todo}</li>);
+    const foos = todoLists.map((foo) => <li key={`-sutdent-id-${foo.id}`}>{foo.todo}</li>);
 
     return (
         <>

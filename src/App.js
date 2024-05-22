@@ -2,15 +2,18 @@
 // import Toggle from './10w/Toggle';
 // import LoginControl from './10w/LoginControl';
 // import LandingPage from './12w/LandingPage';
-import AttendanceBook from './12w/AttendanceBook';
+// import AttendanceBook from './12w/AttendanceBook';
 // import NumberList from './12w/NumberList';
+
+import NameForm from './12w/NameForm';
 
 function App() {
     return (
         <div>
             {/* <LandingPage /> */}
             {/* <NumberList /> */}
-            <AttendanceBook />
+            {/* <AttendanceBook /> */}
+            <NameForm />
         </div>
     );
 }

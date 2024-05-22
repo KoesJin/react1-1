@@ -1127,7 +1127,7 @@ const listItems = numbers.map((number) => <li key={number.toString()}>{number}</
 
 <hr>
 
-### keyProps 이용 todoList 생성
+### id값을 keyProps 이용 todoList 생성
 
 ```
 
@@ -1166,7 +1166,7 @@ export default function NumberList(props) {
 
 <hr>
 
-### index keyporps 이용 todoList 생성
+### index값을 keyporps 이용 todoList 생성
 
 ```
 
@@ -1197,6 +1197,48 @@ export default function NumberList(props) {
     ];
 
     const foos = todoLists.map((foo, index) => <li key={index}>{foo.todo}</li>);
+
+    return (
+        <>
+            <ul>{foos}</ul>
+        </>
+    );
+}
+
+```
+
+<hr>
+
+### 포맷팅된 문자열을 keyProps 이용해서 todoList 생성
+
+```
+
+export default function NumberList(props) {
+
+    const todoLists = [
+        {
+            id: 1,
+            todo: '할 일1',
+        },
+        {
+            id: 2,
+            todo: '할 일2',
+        },
+        {
+            id: 3,
+            todo: '할 일3',
+        },
+        {
+            id: 4,
+            todo: '할 일4',
+        },
+        {
+            id: 5,
+            todo: '할 일5',
+        },
+    ];
+
+    const foos = todoLists.map((foo) => <li key={`-sutdent-id-${foo.id}`}>{foo.todo}</li>);
 
     return (
         <>
@@ -1278,3 +1320,67 @@ export default function AttendanceBook(props) {
 ## 10.6 마치며
 
 <img width="918" alt="스크린샷 2024-05-22 오전 11 39 50" src="https://github.com/KoesJin/react1-1/assets/160344942/c0a665d2-8255-45a0-891d-e6b5a0502326">
+
+<hr>
+
+## 11.1 폼이란 무엇인가?
+
+<img width="897" alt="스크린샷 2024-05-22 오후 12 30 39" src="https://github.com/KoesJin/react1-1/assets/160344942/8c813977-3fe5-49f2-a2aa-6800ef5f2468">
+
+<hr>
+
+## 11.2 제어 컴포넌트
+
+<img width="885" alt="스크린샷 2024-05-22 오후 12 32 09" src="https://github.com/KoesJin/react1-1/assets/160344942/06cde73c-fe08-454e-a1ed-e0c49e089ded">
+
+<hr>
+
+<img width="898" alt="스크린샷 2024-05-22 오후 12 33 02" src="https://github.com/KoesJin/react1-1/assets/160344942/956bdfbf-61f3-4d06-a924-495cbcce515c">
+
+<hr>
+
+### NameForm.jsx
+
+```
+import React, { useState } from 'react';
+
+function NameForm(props) {
+    const [value, setValue] = useState('');
+
+    const handleChange = (event) => {
+        setValue(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        alert('입력한 이름: ' + value);
+        event.preventDefault();
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <label>
+                이름:
+                <input type="text" value={value} onChange={handleChange} />
+            </label>
+            <button type="submit">제출</button>
+        </form>
+    );
+}
+
+export default NameForm;
+
+```
+
+<hr>
+
+-   결과
+
+<img width="1710" alt="스크린샷 2024-05-22 오후 12 44 11" src="https://github.com/KoesJin/react1-1/assets/160344942/7efe89ab-eb93-4668-8f2f-7ef351df97be">
+
+<hr>
+
+<img width="1710" alt="스크린샷 2024-05-22 오후 12 44 16" src="https://github.com/KoesJin/react1-1/assets/160344942/e48ccb51-ec3c-4afa-aef5-f3a391f113be">
+
+<hr>
+
+# 13주차(5월 29일 강의 내용)
