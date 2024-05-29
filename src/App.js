@@ -5,7 +5,9 @@
 // import AttendanceBook from './12w/AttendanceBook';
 // import NumberList from './12w/NumberList';
 // import NameForm from './12w/NameForm';
+// import BoilingVerdict from './13w/BoilingVerict';
 import SignUp from './13w/SignUp';
+// import TemperatureInput from './13w/TemperatureInput';
 
 function App() {
     return (
@@ -15,6 +17,8 @@ function App() {
             {/* <AttendanceBook /> */}
             {/* <NameForm /> */}
             <SignUp />
+            {/* <BoilingVerdict /> */}
+            {/* <TemperatureInput /> */}
         </div>
     );
 }

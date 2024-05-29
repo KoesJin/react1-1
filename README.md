@@ -65,6 +65,52 @@ https://github.com/soaple/first-met-react-practice-v18
 
 <hr>
 
+### 실습 코드 (사용자 정보 받아오기)
+
+```
+import { useState } from 'react';
+
+function SignUp() {
+    const [name, setName] = useState('');
+    const [gender, setGender] = useState('남자');
+
+    const handleChangeName = (event) => {
+        setName(event.target.value);
+    };
+
+    const handleChangeGender = (event) => {
+        setGender(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        alert(`이름: ${name}, 성별: ${gender}`);
+        event.preventDefault();
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <label>
+                이름:
+                <input type="text" value={name} onChange={handleChangeName} />
+            </label>
+            <br />
+            <label>
+                성별:
+                <select value={gender} onChange={handleChangeGender}>
+                    <option value="남자">남자</option>
+                    <option value="여자">여자</option>
+                </select>
+            </label>
+            <button type="submit">제출</button>
+        </form>
+    );
+}
+
+export default SignUp;
+```
+
+<hr>
+
 # 12주차(5월 22일 강의 내용)
 
 ### Toolbar.jsx
