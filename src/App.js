@@ -4,8 +4,8 @@
 // import LandingPage from './12w/LandingPage';
 // import AttendanceBook from './12w/AttendanceBook';
 // import NumberList from './12w/NumberList';
-
-import NameForm from './12w/NameForm';
+// import NameForm from './12w/NameForm';
+import SignUp from './13w/SignUp';
 
 function App() {
     return (
@@ -13,7 +13,8 @@ function App() {
             {/* <LandingPage /> */}
             {/* <NumberList /> */}
             {/* <AttendanceBook /> */}
-            <NameForm />
+            {/* <NameForm /> */}
+            <SignUp />
         </div>
     );
 }
