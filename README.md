@@ -1216,7 +1216,7 @@ export default NotificationList;
 -   리액트 엘리먼트는 Virtual DOM의 형태
 -   DOM 엘리먼트는 페이지의 모든 정보를 가지고 있어 무거움
 
-![2024  3  15  - 0](https://github.com/KoesJin/react1-1/assets/160344942/b811dba7-42ec-4151-a2ac-06a8c769729b)
+![2024  3  15  - 0](https://github.com/KoesJin/react1-1/assets/160344942b811dba7-42ec-4151-a2ac-06a8c769729b)
 
 ### 2. 엘리먼트의 생김새
 
@@ -1342,9 +1342,11 @@ export default NotificationList;
 
 -   npm i gh-pages
 -   package.json -> "homepage": "https://KoesJin.github.io/레포지토리 이름/"
+
     ![img1](https://github.com/KoesJin/react1-1/assets/160344942/2c1e7d42-4bc3-43f5-adce-d98fcbf50ad4)
 
 -   deploy": "gh-pages -d build" 를 만들어두면 앞으로 npm run deploy 를 실행하면 gh-pages -d build 를 실행하는 것과 같은 효과
+
     <img width="706" alt="img2" src="https://github.com/KoesJin/react1-1/assets/160344942/474931cc-e7f2-4219-acd2-3fe9b6c33a36">
 
 4. gh-pages 배포하고 레포지토리에서 다시 설정하기
