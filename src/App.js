@@ -6,8 +6,10 @@
 // import NumberList from './12w/NumberList';
 // import NameForm from './12w/NameForm';
 // import BoilingVerdict from './13w/BoilingVerict';
-import SignUp from './13w/SignUp';
+// import SignUp from './13w/SignUp';
 // import TemperatureInput from './13w/TemperatureInput';
+
+import Calculator from './14w/Calculator';
 
 function App() {
     return (
@@ -16,9 +18,10 @@ function App() {
             {/* <NumberList /> */}
             {/* <AttendanceBook /> */}
             {/* <NameForm /> */}
-            <SignUp />
+            {/* <SignUp /> */}
             {/* <BoilingVerdict /> */}
             {/* <TemperatureInput /> */}
+            <Calculator />
         </div>
     );
 }
