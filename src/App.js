@@ -8,8 +8,10 @@
 // import BoilingVerdict from './13w/BoilingVerict';
 // import SignUp from './13w/SignUp';
 // import TemperatureInput from './13w/TemperatureInput';
+// import Calculator from './14w/Calculator';
+// import WelcomeDialog from './14w/WelcomeDialog';
 
-import Calculator from './14w/Calculator';
+import SplitPane from './14w/SplitPane';
 
 function App() {
     return (
@@ -21,7 +23,9 @@ function App() {
             {/* <SignUp /> */}
             {/* <BoilingVerdict /> */}
             {/* <TemperatureInput /> */}
-            <Calculator />
+            {/* <Calculator /> */}
+            {/* <WelcomeDialog /> */}
+            <SplitPane left={<Contacts />} right={<Chat />} />
         </div>
     );
 }

@@ -31,6 +31,200 @@ https://github.com/soaple/first-met-react-practice-v18
 
 1️⃣3️⃣ [13주차](#13주차-5월-29일-강의-내용)
 
+1️⃣4️⃣ [14주차](#14주차-6월-5일-강의-내용)
+
+<hr>
+
+# 14주차 (6월 5일 강의 내용)
+
+## 12.2 하위 컴포넌트에서 state 공유하기
+
+### (1)
+
+<img width="812" alt="스크린샷 2024-06-05 오전 10 06 59" src="https://github.com/KoesJin/react1-1/assets/160344942/908de83e-6244-4260-b40e-ac90aede6f1a">
+
+<hr>
+
+### (2)
+
+<img width="794" alt="스크린샷 2024-06-05 오전 10 31 08" src="https://github.com/KoesJin/react1-1/assets/160344942/329bb2bf-8338-4b5c-9f64-1b8b3f640d0c">
+
+<hr>
+
+### (3)
+
+<img width="793" alt="스크린샷 2024-06-05 오전 10 43 48" src="https://github.com/KoesJin/react1-1/assets/160344942/8d3071c9-e71d-409b-958e-77863b5c0a38">
+
+<hr>
+
+### (4)
+
+<img width="815" alt="스크린샷 2024-06-05 오전 11 10 07" src="https://github.com/KoesJin/react1-1/assets/160344942/ec6b9154-8fb2-4f04-9cdd-52538b9ebfde">
+
+<hr>
+
+### (4)
+
+<img width="815" alt="스크린샷 2024-06-05 오전 11 10 07" src="https://github.com/KoesJin/react1-1/assets/160344942/ec6b9154-8fb2-4f04-9cdd-52538b9ebfde">
+
+<hr>
+
+### (5)
+
+<img width="817" alt="스크린샷 2024-06-05 오전 11 17 27" src="https://github.com/KoesJin/react1-1/assets/160344942/e5488ac4-b60f-454c-8131-b7bdb50ccc3f">
+
+<hr>
+
+### 결과
+
+<img width="1710" alt="스크린샷 2024-06-05 오전 11 27 07" src="https://github.com/KoesJin/react1-1/assets/160344942/bd609164-3849-4ee5-8b48-f66efec357bb">
+
+<img width="1710" alt="스크린샷 2024-06-05 오전 11 27 14" src="https://github.com/KoesJin/react1-1/assets/160344942/556cb0f2-fcf4-4f68-9c0b-f4247ea38c21">
+
+```
+TemperautreInput.jsx
+
+const scaleNames = {
+    c: '섭씨',
+    f: '화씨',
+};
+
+function TemperatureInput(props) {
+    const handleChange = (event) => {
+        props.onTemperatureChange(event.target.value);
+    };
+
+    return (
+        <fieldset>
+            <legend>온도를 입력해주세요(단위:{scaleNames[props.scale]})</legend>
+            <input value={props.temperature} onChange={handleChange} />
+        </fieldset>
+    );
+}
+
+export default TemperatureInput;
+
+```
+
+```
+Calculatore.jsx
+
+import React, { useState } from 'react';
+import TemperatureInput from './TemperatureInput';
+
+// 물이 끓는지 여부를 판단하는 컴포넌트
+function BoilingVerdict(props) {
+    if (props.celsius >= 100) {
+        return <p>물이 끓습니다.</p>;
+    }
+    return <p>물이 끓지 않습니다.</p>;
+}
+
+// 화씨를 섭씨로 변환하는 함수
+function toCelsius(fahrenheit) {
+    return ((fahrenheit - 32) * 5) / 9;
+}
+
+// 섭씨를 화씨로 변환하는 함수
+function toFahrenheit(celsius) {
+    return (celsius * 9) / 5 + 32;
+}
+
+// 주어진 온도를 변환하는 함수
+function tryConvert(temperature, convert) {
+    const input = parseFloat(temperature);
+    if (Number.isNaN(input)) {
+        return '';
+    }
+    const output = convert(input);
+    // 소수점 세 자리로 반올림
+    const rounded = Math.round(output * 1000) / 1000;
+    return rounded.toString();
+}
+
+// 온도 변환기 컴포넌트
+function Calculator(props) {
+    // 온도 상태 관리
+    const [temperature, setTemperature] = useState('');
+    // 온도 단위 상태 관리
+    const [scale, setScale] = useState('c');
+
+    // 섭씨 온도 변경 핸들러
+    const handleCelsiusChange = (temperature) => {
+        setTemperature(temperature);
+        setScale('c');
+    };
+
+    // 화씨 온도 변경 핸들러
+    const handleFahrenheitChange = (temperature) => {
+        setTemperature(temperature);
+        setScale('f');
+    };
+
+    // 현재 스케일에 따라 온도 변환
+    const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
+    const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
+
+    // 렌더링
+    return (
+        <div>
+            {/* 섭씨 입력 컴포넌트 */}
+            <TemperatureInput scale="c" temperature={celsius} onTemperatureChange={handleCelsiusChange} />
+            {/* 화씨 입력 컴포넌트 */}
+            <TemperatureInput scale="f" temperature={fahrenheit} onTemperatureChange={handleFahrenheitChange} />
+            {/* 물이 끓는지 여부를 보여주는 컴포넌트 */}
+            <BoilingVerdict celsius={parseFloat(celsius)} />
+        </div>
+    );
+}
+
+// Calculator 컴포넌트를 기본으로 내보냄
+export default Calculator;
+
+```
+
+<hr>
+
+## 13.1 합성에 대해 알아보기
+
+<img width="808" alt="스크린샷 2024-06-05 오후 12 19 04" src="https://github.com/KoesJin/react1-1/assets/160344942/70d78426-7106-4edd-98b2-694ade5505b6">
+
+<img width="797" alt="스크린샷 2024-06-05 오후 12 22 20" src="https://github.com/KoesJin/react1-1/assets/160344942/842178b8-8a4d-4cef-8a5d-466fd757915e">
+
+<hr>
+
+## React.createElemnet에 관하여
+
+<img width="789" alt="스크린샷 2024-06-05 오후 12 23 52" src="https://github.com/KoesJin/react1-1/assets/160344942/f06e6d92-2e87-4b9c-bcfa-9de471b66234">
+
+<hr>
+
+### FancyBorder 사용
+
+<img width="803" alt="스크린샷 2024-06-05 오후 12 27 26" src="https://github.com/KoesJin/react1-1/assets/160344942/68f955c9-0b37-47a5-9544-c1065685f66b">
+
+<img width="811" alt="스크린샷 2024-06-05 오후 12 40 18" src="https://github.com/KoesJin/react1-1/assets/160344942/19be228b-137a-4483-8a06-9ca41af93053">
+
+<hr>
+
+```
+SplitPane.jsx
+
+import React from 'react';
+
+function SplitPane(props) {
+return (
+<div className="SplitPane">
+<div className="SplitPane-left">{props.left}</div>
+<div className="SplitPane-right">{props.right}</div>
+</div>
+);
+}
+
+export default SplitPane;
+
+```
+
 <hr>
 
 # 13주차 (5월 29일 강의 내용)
@@ -68,11 +262,12 @@ https://github.com/soaple/first-met-react-practice-v18
 ### 실습 코드 (사용자 정보 받아오기)
 
 ```
+
 import { useState } from 'react';
 
 function SignUp() {
-    const [name, setName] = useState('');
-    const [gender, setGender] = useState('남자');
+const [name, setName] = useState('');
+const [gender, setGender] = useState('남자');
 
     const handleChangeName = (event) => {
         setName(event.target.value);
@@ -104,9 +299,11 @@ function SignUp() {
             <button type="submit">제출</button>
         </form>
     );
+
 }
 
 export default SignUp;
+
 ```
 
 <hr>
@@ -116,22 +313,23 @@ export default SignUp;
 ### Toolbar.jsx
 
 ```
+
 import React from 'react';
 
 const styles = {
-    wrapper: {
-        padding: 16,
-        display: 'flex',
-        flexDirection: 'row',
-        borderBottom: '1px solid grey',
-    },
-    greeting: {
-        marginRight: 8,
-    },
+wrapper: {
+padding: 16,
+display: 'flex',
+flexDirection: 'row',
+borderBottom: '1px solid grey',
+},
+greeting: {
+marginRight: 8,
+},
 };
 
 function Toolbar(props) {
-    const { isLoggedIn, onClickLogin, onClickLogout } = props;
+const { isLoggedIn, onClickLogin, onClickLogout } = props;
 
     return (
         <div style={styles.wrapper}>
@@ -144,9 +342,11 @@ function Toolbar(props) {
             )}
         </div>
     );
+
 }
 
 export default Toolbar;
+
 ```
 
 <hr>
@@ -154,11 +354,12 @@ export default Toolbar;
 ### LandingPage.jsx
 
 ```
+
 import React, { useState } from 'react';
 import Toolbar from '../12w/TooBar';
 
 function LandingPage() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const onClickLogin = () => {
         setIsLoggedIn(true);
@@ -174,6 +375,7 @@ function LandingPage() {
             <div style={{ padding: 16 }}>KJS 랜딩 페이지</div>
         </div>
     );
+
 }
 
 export default LandingPage;
@@ -215,11 +417,12 @@ export default LandingPage;
 ```
 
 export default function NumberList(props) {
-    const { numbers } = props;
+const { numbers } = props;
 
     const listItems = numbers.map((number) => <li key={number.toString()}>{number}</li>);
 
     return <ul>{listItems}</ul>;
+
 }
 
 ```
@@ -229,15 +432,16 @@ export default function NumberList(props) {
 ### App.js
 
 ```
+
 const numbers = [1, 2, 3, 4, 5];
 
 function App() {
-    return (
-        <div>
-            {/* <LandingPage /> */}
-            <NumberList numbers={numbers} />
-        </div>
-    );
+return (
+<div>
+{/_ <LandingPage /> _/}
+<NumberList numbers={numbers} />
+</div>
+);
 }
 
 ```
@@ -255,6 +459,7 @@ function App() {
 ## 실습
 
 ```
+
 //변겅전
 const listItems = numbers.map((number) => <li>{number}</li>);
 
@@ -262,7 +467,8 @@ const listItems = numbers.map((number) => <li>{number}</li>);
 const listItems = numbers.map((number) => <li key={number.toString()}>{number}</li>);
 
 //index 사용해서 변경 가능
- const listItems = numbers.map((number, index) => <li key={index}>{number}</li>);
+const listItems = numbers.map((number, index) => <li key={index}>{number}</li>);
+
 ```
 
 <hr>
@@ -299,8 +505,8 @@ export default function NumberList(props) {
     const TodoList = todoLists.map((todolist) => <li key={todolist.id}>{todolist.todo}</li>);
 
     return <ul>{TodoList}</ul>;
-}
 
+}
 
 ```
 
@@ -311,7 +517,7 @@ export default function NumberList(props) {
 ```
 
 export default function NumberList(props) {
-    // const { numbers } = props;
+// const { numbers } = props;
 
     const todoLists = [
         {
@@ -343,6 +549,7 @@ export default function NumberList(props) {
             <ul>{foos}</ul>
         </>
     );
+
 }
 
 ```
@@ -385,6 +592,7 @@ export default function NumberList(props) {
             <ul>{foos}</ul>
         </>
     );
+
 }
 
 ```
@@ -396,21 +604,22 @@ export default function NumberList(props) {
 ### keyProps 사용 x
 
 ```
+
 export default function AttendanceBook(props) {
-    const students = [
-        {
-            name: '홍길동',
-        },
-        {
-            name: '홍길동1',
-        },
-        {
-            name: '홍길동2',
-        },
-        {
-            name: '홍길동3',
-        },
-    ];
+const students = [
+{
+name: '홍길동',
+},
+{
+name: '홍길동1',
+},
+{
+name: '홍길동2',
+},
+{
+name: '홍길동3',
+},
+];
 
     return (
         <ul>
@@ -419,6 +628,7 @@ export default function AttendanceBook(props) {
             ))}
         </ul>
     );
+
 }
 
 ```
@@ -428,21 +638,22 @@ export default function AttendanceBook(props) {
 ### keyProps 사용
 
 ```
+
 export default function AttendanceBook(props) {
-    const students = [
-        {
-            name: '홍길동',
-        },
-        {
-            name: '홍길동1',
-        },
-        {
-            name: '홍길동2',
-        },
-        {
-            name: '홍길동3',
-        },
-    ];
+const students = [
+{
+name: '홍길동',
+},
+{
+name: '홍길동1',
+},
+{
+name: '홍길동2',
+},
+{
+name: '홍길동3',
+},
+];
 
     return (
         <ul>
@@ -451,6 +662,7 @@ export default function AttendanceBook(props) {
             ))}
         </ul>
     );
+
 }
 
 ```
@@ -482,10 +694,11 @@ export default function AttendanceBook(props) {
 ### NameForm.jsx
 
 ```
+
 import React, { useState } from 'react';
 
 function NameForm(props) {
-    const [value, setValue] = useState('');
+const [value, setValue] = useState('');
 
     const handleChange = (event) => {
         setValue(event.target.value);
@@ -505,6 +718,7 @@ function NameForm(props) {
             <button type="submit">제출</button>
         </form>
     );
+
 }
 
 export default NameForm;
@@ -538,6 +752,7 @@ export default NameForm;
 <hr>
 
 ```
+
 import { useState } from 'react';
 import WarningBanner from './WarningBanner';
 
@@ -563,13 +778,13 @@ const [showWarning, setShowWarning] = useState(false);
 -   showWarning props를 WarningBanner(props) 에 전달
 
 ```
-export default function WarningBanner(props) {
-    if (props.warning) {
-        return null;
-    }
-    return <div>경고!!</div>;
-}
 
+export default function WarningBanner(props) {
+if (props.warning) {
+return null;
+}
+return <div>경고!!</div>;
+}
 
 ```
 
@@ -581,6 +796,7 @@ export default function WarningBanner(props) {
 -   button 변수에 담아 컴포넌트를 대입한 예제 코드
 
 ```
+
     let button;
     if (isLogedIn) {
       button = <LogoutButton onClick={handleLogoutClick} />;
@@ -599,8 +815,10 @@ export default function WarningBanner(props) {
 -   인라인 조건은 조건문을 코드 안에 집어 넣는 것이다.
 
 ```
+
 true && expression -> expression
 false && expression -> false
+
 ```
 
 <hr>
@@ -616,12 +834,14 @@ false && expression -> false
 -   컴포넌트를 렌더링 하고 싶지 않을 때는 null을 반환한다.
 
 ```
+
 export default function WarningBanner(props) {
-  if (props.warning) {
-    return null;
-  }
-  return <div>경고!!</div>;
+if (props.warning) {
+return null;
 }
+return <div>경고!!</div>;
+}
+
 ```
 
 -   False인 경우에만 null을 반환하기 때문에 컴포넌트를 출력하지 않는다.
@@ -631,11 +851,12 @@ export default function WarningBanner(props) {
 ### LoginControl.jsx
 
 ```
+
 import { useState } from 'react';
 import Greeting from './Greeting';
 
 export default function LoginControl() {
-    const [isLogedIn, setIsLogedIn] = useState(false);
+const [isLogedIn, setIsLogedIn] = useState(false);
 
     const handleLoginClick = () => {
         setIsLogedIn(true);
@@ -652,26 +873,29 @@ export default function LoginControl() {
             {isLogedIn ? <LogoutButton onClick={handleLogoutClick} /> : <LoginButton onClick={handleLoginClick} />}
         </div>
     );
+
 }
 
 function LogoutButton(props) {
-    return <button onClick={props.onClick}>로그아웃</button>;
+return <button onClick={props.onClick}>로그아웃</button>;
 }
 
 function LoginButton(props) {
-    return <button onClick={props.onClick}>로그인</button>;
+return <button onClick={props.onClick}>로그인</button>;
 }
+
 ```
 
 ### Greeting.jsx
 
 ```
+
 export default function Greeting(props) {
-    if (props.isLogedIn) {
-        return <p>환영합니다.</p>;
-    } else {
-        return <p>로그인해 주세요.</p>;
-    }
+if (props.isLogedIn) {
+return <p>환영합니다.</p>;
+} else {
+return <p>로그인해 주세요.</p>;
+}
 }
 
 ```
@@ -709,10 +933,11 @@ export default function Greeting(props) {
 ### UseStatus 컴포넌트
 
 ```
+
 import { useEffect, useState } from 'react';
 
 export default function UserStatus(props) {
-    const [isOnline, setIsOnline] = useState(null);
+const [isOnline, setIsOnline] = useState(null);
 
     useEffect(() => {
         function handleStatusChange(status) {
@@ -729,6 +954,7 @@ export default function UserStatus(props) {
         return '대기 중...';
     }
     return isOnline ? '온라인' : '오프라인';
+
 }
 
 ```
@@ -738,10 +964,11 @@ export default function UserStatus(props) {
 ### UserListItem 컴포넌트
 
 ```
+
 import { useEffect, useState } from 'react';
 
 export default function UserListItem(props) {
-    const [isOnline, setIsOnline] = useState(null);
+const [isOnline, setIsOnline] = useState(null);
 
     useEffect(() => {
         function handleStatusChange(status) {
@@ -755,6 +982,7 @@ export default function UserListItem(props) {
     });
 
     return <li style={{ color: isOnline ? 'green' : 'black' }}>{props.user.name}</li>;
+
 }
 
 ```
@@ -784,15 +1012,17 @@ export default function UserListItem(props) {
 ### useCounter 컴포넌트
 
 ```
+
 import { useState } from 'react';
 
 function useCounter(initialValue) {
-    const [count, setCount] = useState(initialValue);
+const [count, setCount] = useState(initialValue);
 
     const increaseCount = () => setCount((count) => count + 1);
     const decreaseCount = () => setCount((count) => Math.max(count - 1, 0));
 
     return [count, increaseCount, decreaseCount];
+
 }
 
 export default useCounter;
@@ -804,14 +1034,15 @@ export default useCounter;
 ### Accommodate 컴포넌트
 
 ```
+
 import React, { useState, useEffect } from 'react';
 import useCounter from './useCounter';
 
 const MAX_CAPACITY = 10;
 
 function Accommodate() {
-    const [isFull, setIsFull] = useState(false);
-    const [count, increaseCount, decreaseCount] = useCounter(0);
+const [isFull, setIsFull] = useState(false);
+const [count, increaseCount, decreaseCount] = useCounter(0);
 
     useEffect(() => {
         console.log('======================');
@@ -836,6 +1067,7 @@ function Accommodate() {
             {isFull && <p style={{ color: 'red' }}>정원이 가득찼습니다.</p>}
         </div>
     );
+
 }
 
 export default Accommodate;
@@ -879,10 +1111,11 @@ export default Accommodate;
 ### useState 사용 예제
 
 ```
+
 import React, { useState } from 'react';
 
 export default function Counter() {
-    const [count, setCount] = useState(0);
+const [count, setCount] = useState(0);
 
     const onclick = () => {
         setCount(count + 1);
@@ -894,6 +1127,7 @@ export default function Counter() {
             <button onClick={onclick}>클릭</button>
         </>
     );
+
 }
 
 ```
@@ -955,10 +1189,11 @@ export default function Counter() {
 ### useRef 예제코드
 
 ```
+
 import React, { useRef } from 'react';
 
 export default function FocusBtn(props) {
-    const inputElem = useRef(null);
+const inputElem = useRef(null);
 
     const onButtonClick = () => {
         inputElem.current.focus();
@@ -970,7 +1205,9 @@ export default function FocusBtn(props) {
             <button onClick={onButtonClick}>Focus the Button</button>
         </>
     );
+
 }
+
 ```
 
 <hr>
