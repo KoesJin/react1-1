@@ -10,8 +10,12 @@
 // import TemperatureInput from './13w/TemperatureInput';
 // import Calculator from './14w/Calculator';
 // import WelcomeDialog from './14w/WelcomeDialog';
+// import SplitPane from './14w/SplitPane';
+// import Card from './6/11/Card';
+// import ProfileCard from './6/11/ProfileCard';
+// import Btn from './6/11/ContextTest';
 
-import SplitPane from './14w/SplitPane';
+import DarkOrLight from './6/11/DarkOrLight';
 
 function App() {
     return (
@@ -25,7 +29,12 @@ function App() {
             {/* <TemperatureInput /> */}
             {/* <Calculator /> */}
             {/* <WelcomeDialog /> */}
-            <SplitPane left={<Contacts />} right={<Chat />} />
+            {/* <SplitPane left={<Contacts />} right={<Chat />} /> */}
+            {/* <Card /> */}
+            {/* <ProfileCard /> */}
+            {/* <Btn /> */}
+            {/* <MainContent /> */}
+            <DarkOrLight />
         </div>
     );
 }

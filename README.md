@@ -33,6 +33,148 @@ https://github.com/soaple/first-met-react-practice-v18
 
 1️⃣4️⃣ [14주차](#14주차-6월-5일-강의-내용)
 
+1️⃣5️⃣ [15주차 보강 (6주차 보강)](#15주차-보강-6월-11일-강의-내용)
+
+<hr>
+
+# 15주차 (6주차보강) (6월 11일 강의 내용)
+
+## [2] Specialization(특수화, 전문화)
+
+<img width="896" alt="스크린샷 2024-06-11 오전 10 06 05" src="https://github.com/KoesJin/react1-1/assets/160344942/3f676775-edb7-442c-b38d-c37fc7104e61">
+
+<hr>
+
+## [3] Containment와 Specialization을 같이 사용하기
+
+<img width="913" alt="스크린샷 2024-06-11 오전 10 12 32" src="https://github.com/KoesJin/react1-1/assets/160344942/44fa9d27-8fa8-4f23-acaa-cd336846c962">
+
+<hr>
+
+## 13.2 상속에 대해 알아보기
+
+<img width="899" alt="스크린샷 2024-06-11 오전 10 19 40" src="https://github.com/KoesJin/react1-1/assets/160344942/5bf6530c-e290-44ca-a76d-3db4c7bf34f9">
+
+<hr>
+
+## 13.3(실습) Card 컴포넌트 만들기
+
+<img width="891" alt="스크린샷 2024-06-11 오전 10 21 32" src="https://github.com/KoesJin/react1-1/assets/160344942/245a6099-f1ef-4e39-a595-48c1b0a10310">
+
+-   실습 코드
+
+```
+Card.jsx
+
+function Card(props) {
+    // props 객체에서 title, backgroundColor, children 속성을 추출
+    const { title, backgroundColor, children } = props;
+
+    return (
+        <div
+            // 스타일 속성 설정
+            style={{
+                margin: 8, // 외부 여백
+                padding: 8, // 내부 여백
+                borderRadius: 8, // 모서리 둥글게
+                boxShadow: '0px 0px 4px grey', // 그림자 효과
+                backgroundColor: backgroundColor || 'white', // 배경색, 기본값은 흰색
+            }}
+        >
+            {/* title이 존재하면 h1 요소로 출력 */}
+            {title && <h1>{title}</h1>}
+            {/* children은 하위 요소로 출력 */}
+            {children}
+        </div>
+    );
+}
+
+export default Card;
+
+```
+
+```
+ProfileCard.jsx
+
+import Card from './Card';
+
+function ProfileCard(props) {
+    return (
+        <Card title="Inje Lee" backgroundColor="#4ea04e">
+            <p>안녕하세요, 소플입니다.</p>
+            <p>저는 리액트를 사용해서 개발하고 있습니다.</p>
+        </Card>
+    );
+}
+
+export default ProfileCard;
+
+```
+
+<hr>
+
+## 13.4 마치며
+
+<img width="894" alt="스크린샷 2024-06-11 오전 10 38 55" src="https://github.com/KoesJin/react1-1/assets/160344942/e5a45d27-91b0-4778-9091-892f05de4476">
+
+<hr>
+
+## 14.1 컨텍스트란 무엇인가?
+
+<img width="908" alt="스크린샷 2024-06-11 오전 10 41 39" src="https://github.com/KoesJin/react1-1/assets/160344942/61867e31-43e4-4365-a81d-deaa8be9a19a">
+
+<hr>
+
+## 14.2 언제 컨텍스트를 사용해야 할까?
+
+<img width="905" alt="스크린샷 2024-06-11 오전 10 47 58" src="https://github.com/KoesJin/react1-1/assets/160344942/442f23f0-5777-47d7-9b68-d3a837e53a17">
+
+<img width="905" alt="스크린샷 2024-06-11 오전 11 25 16" src="https://github.com/KoesJin/react1-1/assets/160344942/2fde4069-170a-43e5-a1e4-5ff98df4c5cf">
+
+-   props만 쓸경우 한계점 (복잡해지고 길어짐)
+
+<img width="1448" alt="스크린샷 2024-06-11 오전 11 11 14" src="https://github.com/KoesJin/react1-1/assets/160344942/10e86549-c9be-4203-ba2c-8f846bac9f44">
+
+<hr>
+
+## 14.3 컨텍스트를 사용하기 전에 고려할 점
+
+<img width="897" alt="스크린샷 2024-06-11 오전 11 26 18" src="https://github.com/KoesJin/react1-1/assets/160344942/76b9b75a-64f2-4541-a107-cc2f2961e7f3">
+
+<img width="898" alt="스크린샷 2024-06-11 오전 11 36 16" src="https://github.com/KoesJin/react1-1/assets/160344942/ff0e4651-58ff-479c-971d-c2acef1697f1">
+
+<hr>
+
+## 14.4 컨텍스트 API
+
+### [1]
+
+<img width="874" alt="스크린샷 2024-06-11 오전 11 42 59" src="https://github.com/KoesJin/react1-1/assets/160344942/ffe9acc6-09c1-4136-a377-dd56472b370e">
+
+### [2]
+
+<img width="905" alt="스크린샷 2024-06-11 오전 11 44 51" src="https://github.com/KoesJin/react1-1/assets/160344942/b4779fa3-5320-43f2-b295-5efb18cb02e2">
+
+### [3] ,[4]
+
+<img width="904" alt="스크린샷 2024-06-11 오후 12 06 41" src="https://github.com/KoesJin/react1-1/assets/160344942/90303cd8-3edc-4603-9111-978355dac57c">
+
+### [5]
+
+<img width="896" alt="스크린샷 2024-06-11 오후 12 10 04" src="https://github.com/KoesJin/react1-1/assets/160344942/41e5b20c-5028-4e20-a567-cf3c58d365bb">
+
+<hr>
+
+## 14.5 여러 개의 컨텍스트 사용하기
+
+<img width="905" alt="스크린샷 2024-06-11 오후 12 15 21" src="https://github.com/KoesJin/react1-1/assets/160344942/17856359-92a3-4f2d-8ad7-65c12ef693ba">
+
+<hr>
+
+## 14.6 useContext
+
+<img width="905" alt="스크린샷 2024-06-11 오후 12 17 31" src="https://github.com/KoesJin/react1-1/assets/160344942/fe85a1dc-213d-47a5-99c4-4ae64fe7da9f">
+
 <hr>
 
 # 14주차 (6월 5일 강의 내용)
